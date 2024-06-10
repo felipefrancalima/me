@@ -81,7 +81,7 @@
         audio {
             width: 200px;
             width: 80%;
-            max-width: 150px;
+            max-width: 101px;
             background-color: rgba(0, 0, 0, 0.8);
             border: 2px solid #ff0000;
             border-radius: 220px;
@@ -103,7 +103,7 @@
                 <h2>Aceita ir ao show do Slipknot comigo?</h2>
                 <div class="button-container">
                     <button onclick="sim()">Sim</button>
-                    <button id="naoButton" onclick="desvia(this)" onmouseover="desvia(this)">Não</button>
+                    <button id="naoButton" onclick="desvia(this)" onmouseover="desvia(this)">Nao</button>
                 </div>
                 <div id e="music-control">
                     <audio src="Birth Of The Cruel -- Released August 5, 2019 (256).mp3" controls loop ></audio>
@@ -124,8 +124,8 @@
                 }
                 function desvia(btn) {
                     btn.style.position = 'absolute';
-                    btn.style.top = geraPosicao(10, 80);
-                    btn.style.left = geraPosicao(10, 80);
+                    btn.style.top = geraPosicao(10, 100);
+                    btn.style.left = geraPosicao(10, 100);
                     console.log('Opa, desviei...');
                 }
                 function geraPosicao(min, max) {
