@@ -8,12 +8,10 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <style>
         body {
-            padding: 0;
-            margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: 100%;
             color: #fff;
             background: #000;
             font-family: sans-serif;
@@ -24,17 +22,17 @@
             max-width: 300px;
             background-color: rgba(0, 0, 0, 0.8);
             border: 2px solid #ff0000;
-            border-radius: 20px;
+            border-radius: 25px;
             padding: 20px;
             text-align: center;
-            z-index: 1;
-            margin: 20px auto;
+        
         }
 
         .button-container {
             display: flex;
             justify-content: center;
-            margin-top: 20px;
+            margin-top: 100px;
+            padding: 3px;
         }
 
         button {
@@ -42,11 +40,13 @@
             padding: 10px;
             width: 100px;
             margin: 5px;
-            border-radius: 5px;
+            border-radius
             cursor: pointer;
             font-size: 16px;
             background-color: #ff0000;
             color: #fff;
+            border-radius: 15px;
+         
         }
 
         .background {
@@ -66,6 +66,7 @@
             height: 50%;
             object-fit: cover;
             filter: brightness(50%);
+            background-size: auto;
         }
 
         #music-control {
@@ -81,50 +82,54 @@
             max-width: 300px;
             background-color: rgba(0, 0, 0, 0.8);
             border: 2px solid #ff0000;
-            border-radius: 20px;
+            border-radius: 220px;
             padding: 3px;
-            text-align: center;
-            margin: 22px auto;
+            margin: auto;
+        }
+
+        #conteudo {
+            margin: auto;
+            padding: 100px;
+           
         }
         
     </style>
 </head>
 <body>
-    <div id="conteudo">
-        <h2>Aceita ir ao show do Slipknot comigo?</h2>
-        <div class="button-container">
-            <button onclick="sim()">Sim</button>
-            <button id="naoButton" onclick="desvia(this)" onmouseover="desvia(this)">Não</button>
-        </div>
-        <div id e="music-control">
-            <audio src="Birth Of The Cruel -- Released August 5, 2019 (256).mp3" controls loop></audio>
-        </div>
-    </div>
-    <div class="background">
-        <img src="Metal Wallpaper para Download no Celular ou Computador PC.jfif" alt="Slipknot 1">
-        <img src="Vermilion - Slipknot.jfif" alt="Slipknot 2">
-        <img src="WOWWIEEEEEEE.jfif" alt="Slipknot 3">
-        <img src="slipknot (1).jfif" alt="Slipknot 4">
-        <img src="☆  James Root.jfif" alt="Slipknot 5">
-        <img src="୧ 𝘖𝘩𝘁𝗼 𝘢𝗶 𝘳𝘰𝗰𝗸 𝘵𝘩𝘦𝗺𝗲 ୨.jfif" alt="Slipknot 6">
-    </div>
-
-    <script>
-        function sim() {
-            alert("Fez uma boa escolha, amigo :)");
-            location.href = "https://www.eventim.com.br/campaign/knotfestbrasil";
-        }
-
-        function desvia(btn) {
-            btn.style.position = 'absolute';
-            btn.style.top = geraPosicao(10, 80);
-            btn.style.left = geraPosicao(10, 80);
-            console.log('Opa, desviei...');
-        }
-
-        function geraPosicao(min, max) {
-            return (Math.random() * (max - min) + min) + "%";
-        }
-    </script>
+        <main>
+            <div id="conteudo">
+                <h2>Aceita ir ao show do Slipknot comigo?</h2>
+                <div class="button-container">
+                    <button onclick="sim()">Sim</button>
+                    <button id="naoButton" onclick="desvia(this)" onmouseover="desvia(this)">Não</button>
+                </div>
+                <div id e="music-control">
+                    <audio src="Birth Of The Cruel -- Released August 5, 2019 (256).mp3" controls loop></audio>
+                </div>
+            </div>
+            <div class="background">
+                <img src="Metal Wallpaper para Download no Celular ou Computador PC.jfif" alt="Slipknot 1">
+                <img src="Vermilion - Slipknot.jfif" alt="Slipknot 2">
+                <img src="WOWWIEEEEEEE.jfif" alt="Slipknot 3">
+                <img src="slipknot (1).jfif" alt="Slipknot 4">
+                <img src="☆  James Root.jfif" alt="Slipknot 5">
+                <img src="୧ 𝘖𝘩𝘁𝗼 𝘢𝗶 𝘳𝘰𝗰𝗸 𝘵𝘩𝘦𝗺𝗲 ୨.jfif" alt="Slipknot 6">
+            </div>
+            <script>
+                function sim() {
+                    alert("Fez uma boa escolha, amigo :)");
+                    location.href = "https://www.eventim.com.br/campaign/knotfestbrasil";
+                }
+                function desvia(btn) {
+                    btn.style.position = 'absolute';
+                    btn.style.top = geraPosicao(10, 80);
+                    btn.style.left = geraPosicao(10, 80);
+                    console.log('Opa, desviei...');
+                }
+                function geraPosicao(min, max) {
+                    return (Math.random() * (max - min) + min) + "%";
+                }
+            </script>
+        </main>
 </body>
 </html>
