@@ -10,17 +10,29 @@
     --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
     --fonte-destaque: 'Bebas Neue';
     --fonte-slip: 'slip';
- }
+}
 
- h2 {
+h2 {
     font-family: var(--fonte-slip);
- }
+}
 
- button {
+button {
     font-family: var(--fonte-slip);
     font-weight: lighter;
     color: red;
     background-color: black;
- }
+}
 
- 
+#naoButton {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    padding: 10px;
+    width: 54px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: #ff0000;
+    color: #fff;
+    border-radius: 15px;
+}
